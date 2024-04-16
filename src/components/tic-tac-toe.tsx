@@ -7,14 +7,9 @@ export default function Board() {
     const [squares, setSquares] = useState(Array(9).fill(''));
 
     function handleClick(i: number) {
-        console.log(`Clicked! i = ${i}`);
-        console.log(squares);
-        //   setValue('X');
         if (squares[i] === "X" || squares[i] === "O" || calculateWinner(squares)) {
             return;
         } else {
-            console.log("hi");
-
             const nextSquares = squares.slice();
             if (xIsNext) {
                 nextSquares[i] = "X";
@@ -52,7 +47,6 @@ export default function Board() {
                 <Square onSquareClick={() => handleClick(7)} value={squares[7]} />
                 <Square onSquareClick={() => handleClick(8)} value={squares[8]} />
             </div>
-
         </>
     );
 }
