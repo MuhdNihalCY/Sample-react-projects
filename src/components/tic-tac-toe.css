@@ -1,5 +1,5 @@
 .status {
-    margin-bottom: 2rem;
+    margin: 2rem;
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -13,4 +13,5 @@
 
 .board-row {
     display: flex;
+    justify-content: center;
 }
